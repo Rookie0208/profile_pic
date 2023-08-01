@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swagat hai</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .page {
+        max-height: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .main-container {
+        background-color: rgb(7, 7, 7);
+        height: 100dvh;
+        width: 100dvw;
+        z-index: -1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        z-index: 2;
+        color: white;
+        font-weight: 400;
+        font-size: 3rem;
+        margin: 1rem;
+        font-family: 'Assistant', sans-serif;
+    }
+
+    @media (max-width : 400px) {
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+
+    button {
+        z-index: 2;
+        color: white;
+        border: none;
+        background-color: black;
+        /* visibility: hidden; */
+        cursor: pointer;
+    }
+    button.visible {
+        transition: 2;
+        visibility: visible;
+    }
+    .modal-container {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(20px);
+    opacity: 0;
+    pointer-events: none;
+}
+.modal-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 60%;
+    border-radius: 1rem;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-font-color);
+    /* opacity: 0; */
+}
+.modal-container.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal-main-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.5rem;
+    padding-left: 0.8rem;
+}
+</style>
+
+<body>
+    <div class="page">
+        <div class="main-container">
+            <h1>Alag he Chull hai na ?? 👀</h1>
+            <!-- <button id="btn">Don't click </button> -->
+        </div>
+        
+    </div>
+
+
+</body>
+<script>
+
+</script>
+</html>
